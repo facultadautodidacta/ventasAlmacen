@@ -7,8 +7,6 @@
  */
 namespace Dompdf;
 
-use Dompdf\Frame;
-
 /**
  * Executes inline PHP code during the rendering process
  *
@@ -35,7 +33,7 @@ class PhpEvaluator
      * @param $code
      * @param array $vars
      */
-    public function evaluate($code, $vars = array())
+    public function evaluate($code, $vars = [])
     {
         if (!$this->_canvas->get_dompdf()->getOptions()->getIsPhpEnabled()) {
             return;
@@ -56,7 +54,7 @@ class PhpEvaluator
     }
 
     /**
-     * @param \Dompdf\Frame $frame
+     * @param Frame $frame
      */
     public function render(Frame $frame)
     {

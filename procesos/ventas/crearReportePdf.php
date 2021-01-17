@@ -18,7 +18,7 @@ function file_get_contents_curl($url) {
     return $data;
 }
 
- $html=file_get_contents("http://localhost/ventas/vistas/ventas/rerpoteVentaPdf.php?idventa=".$id);
+ $html=file_get_contents("http://localhost/ventasAlmacen/vistas/ventas/rerpoteVentaPdf.php?idventa=".$id);
 
 
  

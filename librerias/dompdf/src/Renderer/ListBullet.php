@@ -9,7 +9,6 @@
 namespace Dompdf\Renderer;
 
 use Dompdf\Helpers;
-use Dompdf\FontMetrics;
 use Dompdf\Frame;
 use Dompdf\Image\Cache;
 use Dompdf\FrameDecorator\ListBullet as ListBulletFrameDecorator;
@@ -28,7 +27,7 @@ class ListBullet extends AbstractRenderer
      */
     static function get_counter_chars($type)
     {
-        static $cache = array();
+        static $cache = [];
 
         if (isset($cache[$type])) {
             return $cache[$type];
@@ -92,10 +91,11 @@ class ListBullet extends AbstractRenderer
             case "decimal-leading-zero":
             case "decimal":
             case "1":
-                if ($pad)
+                if ($pad) {
                     $text = str_pad($n, $pad, "0", STR_PAD_LEFT);
-                else
+                } else {
                     $text = $n;
+                }
                 break;
 
             case "upper-alpha":
@@ -134,8 +134,8 @@ class ListBullet extends AbstractRenderer
     function render(Frame $frame)
     {
         $style = $frame->get_style();
-        $font_size = $style->get_font_size();
-        $line_height = (float)$style->length_in_pt($style->line_height, $frame->get_containing_block("w"));
+        $font_size = $style->font_size;
+        $line_height = $style->line_height;
 
         $this->_set_opacity($frame->get_opacity($style->opacity));
 
@@ -148,9 +148,7 @@ class ListBullet extends AbstractRenderer
 
         // Handle list-style-image
         // If list style image is requested but missing, fall back to predefined types
-        if ($style->list_style_image !== "none" &&
-            !Cache::is_broken($img = $frame->get_image_url())
-        ) {
+        if ($style->list_style_image !== "none" && !Cache::is_broken($img = $frame->get_image_url())) {
             list($x, $y) = $frame->get_position();
 
             //For expected size and aspect, instead of box size, use image natural size scaled to DPI.
@@ -232,11 +230,13 @@ class ListBullet extends AbstractRenderer
                     $font_family = $style->font_family;
 
                     $line = $li->get_containing_line();
-                    list($x, $y) = array($frame->get_position("x"), $line->y);
+                    list($x, $y) = [$frame->get_position("x"), $line->y];
 
                     $x -= $this->_dompdf->getFontMetrics()->getTextWidth($text, $font_family, $font_size, $spacing);
 
                     // Take line-height into account
+                    // TODO: should the line height take into account the line height of the containing block (per previous logic)
+                    // $line_height = (float)$style->length_in_pt($style->line_height, $frame->get_containing_block("h"));
                     $line_height = $style->line_height;
                     $y += ($line_height - $font_size) / 4; // FIXME I thought it should be 2, but 4 gives better results
 

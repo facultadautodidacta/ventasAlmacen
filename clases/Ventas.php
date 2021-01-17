@@ -5,15 +5,17 @@ class ventas{
 		$c=new conectar();
 		$conexion=$c->conexion();
 
-		$sql="SELECT art.nombre,
-		art.descripcion,
-		art.cantidad,
-		img.ruta,
-		art.precio
-		from articulos as art 
-		inner join imagenes as img
-		on art.id_imagen=img.id_imagen 
-		and art.id_producto='$idproducto'";
+		$sql = "SELECT 
+				    art.nombre,
+				    art.descripcion,
+				    art.cantidad,
+				    img.ruta,
+				    art.precio
+				FROM
+				    articulos AS art
+				        INNER JOIN
+				    imagenes AS img ON art.id_imagen = img.id_imagen
+				        AND art.id_producto = '$idproducto'";
 		$result=mysqli_query($conexion,$sql);
 
 		$ver=mysqli_fetch_row($result);
