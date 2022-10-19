@@ -12,7 +12,7 @@
 	<?php require_once "menu.php"; ?>
 </head>
 <body>
-
+<body style="background: url(../archivos/wallpaper1.jpg)">
 	<div class="container">
 		 <h1>Venta de productos</h1>
 		 <div class="row">

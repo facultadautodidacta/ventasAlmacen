@@ -22,14 +22,14 @@
 	<script src="js/funciones.js"></script>
 
 </head>
-<body style="background-color: gray">
+<body style="background: url(archivos/wallpaper1.jpg)">
 	<br><br><br>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class="panel panel-danger">
-					<div class="panel panel-heading">Registrar Administrador</div>
+					<div class="panel panel-heading">Registrar Usuario</div>
 					<div class="panel panel-body">
 						<form id="frmRegistro">
 							<label>Nombre</label>

@@ -9,6 +9,7 @@ if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='admin'){
 		<?php require_once "menu.php"; ?>
 	</head>
 	<body>
+	<body style="background: url(../archivos/wallpaper1.jpg)">
 		<div class="container">
 			<h1>Administrar usuarios</h1>
 			<div class="row">

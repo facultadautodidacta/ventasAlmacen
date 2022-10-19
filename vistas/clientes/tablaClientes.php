@@ -18,14 +18,14 @@
 
 <div class="table-responsive">
 	 <table class="table table-hover table-condensed table-bordered" style="text-align: center;">
-	 	<caption><label>Clientes :)</label></caption>
+	 	<caption><label>Lista de Consulta</label></caption>
 	 	<tr>
 	 		<td>Nombre</td>
-	 		<td>Apellido</td>
+	 		<td>Estado - Ciudad</td>
 	 		<td>Direccion</td>
-	 		<td>Email</td>
+	 		<td>Correo electronico</td>
 	 		<td>Telefono</td>
-	 		<td>RFC</td>
+	 		<td>Detalles</td>
 	 		<td>Editar</td>
 	 		<td>Eliminar</td>
 	 	</tr>

@@ -47,7 +47,7 @@ $result=mysqli_query($conexion,$sql);
 
  </head>
  <body>
- 		<p>Facultad autodidacta</p>
+ 		<p>Gracias por comprar en Autozone</p>
  		<p>
  			Fecha: <?php echo $fecha; ?>
  		</p>
