@@ -28,7 +28,7 @@
 					<td>Cliente</td>
 					<td>Total de compra</td>
 					<td>Ticket</td>
-					<td>Reporte</td>
+					
 				</tr>
 		<?php while($ver=mysqli_fetch_row($result)): ?>
 				<tr>
@@ -53,11 +53,7 @@
 							Ticket <span class="glyphicon glyphicon-list-alt"></span>
 						</a>
 					</td>
-					<td>
-						<a href="../procesos/ventas/crearReportePdf.php?idventa=<?php echo $ver[0] ?>" class="btn btn-danger btn-sm">
-							Reporte <span class="glyphicon glyphicon-file"></span>
-						</a>	
-					</td>
+					
 				</tr>
 		<?php endwhile; ?>
 			</table>

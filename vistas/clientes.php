@@ -12,14 +12,15 @@ if(isset($_SESSION['usuario'])){
 		<?php require_once "menu.php"; ?>
 	</head>
 	<body>
+	<body style="background: url(../archivos/wallpaper1.jpg)">
 		<div class="container">
-			<h1>Clientes</h1>
+			<h1>Agregar Datos para envio de productos</h1>
 			<div class="row">
 				<div class="col-sm-4">
 					<form id="frmClientes">
-						<label>Nombre</label>
+						<label>Nombre Completo</label>
 						<input type="text" class="form-control input-sm" id="nombre" name="nombre">
-						<label>Apellido</label>
+						<label>Estado - Ciudad</label>
 						<input type="text" class="form-control input-sm" id="apellidos" name="apellidos">
 						<label>Direccion</label>
 						<input type="text" class="form-control input-sm" id="direccion" name="direccion">
@@ -27,7 +28,7 @@ if(isset($_SESSION['usuario'])){
 						<input type="text" class="form-control input-sm" id="email" name="email">
 						<label>Telefono</label>
 						<input type="text" class="form-control input-sm" id="telefono" name="telefono">
-						<label>RFC</label>
+						<label>Detalles</label>
 						<input type="text" class="form-control input-sm" id="rfc" name="rfc">
 						<p></p>
 						<span class="btn btn-primary" id="btnAgregarCliente">Agregar</span>
@@ -53,17 +54,17 @@ if(isset($_SESSION['usuario'])){
 					<div class="modal-body">
 						<form id="frmClientesU">
 							<input type="text" hidden="" id="idclienteU" name="idclienteU">
-							<label>Nombre</label>
+							<label>Nombre Completo</label>
 							<input type="text" class="form-control input-sm" id="nombreU" name="nombreU">
-							<label>Apellido</label>
+							<label>Estado - Ciuad</label>
 							<input type="text" class="form-control input-sm" id="apellidosU" name="apellidosU">
 							<label>Direccion</label>
 							<input type="text" class="form-control input-sm" id="direccionU" name="direccionU">
-							<label>Email</label>
+							<label>Correo Electronico</label>
 							<input type="text" class="form-control input-sm" id="emailU" name="emailU">
 							<label>Telefono</label>
 							<input type="text" class="form-control input-sm" id="telefonoU" name="telefonoU">
-							<label>RFC</label>
+							<label>Detalles</label>
 							<input type="text" class="form-control input-sm" id="rfcU" name="rfcU">
 						</form>
 					</div>

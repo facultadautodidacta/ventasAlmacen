@@ -19,6 +19,7 @@ if(isset($_SESSION['usuario'])){
 		?>
 	</head>
 	<body>
+		<body style="background: url(../archivos/wallpaper1.jpg)">
 		<div class="container">
 			<h1>Articulos</h1>
 			<div class="row">

@@ -21,27 +21,29 @@
 	<script src="librerias/jquery-3.2.1.min.js"></script>
 	<script src="js/funciones.js"></script>
 </head>
-<body style="background-color: gray">
+<body style="background-color: #ED6500">
 	<br><br><br>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class="panel panel-primary">
-					<div class="panel panel-heading">Sistema de ventas y almacen</div>
+					<div class="panel panel-heading">Bienvenido a ZoneAuto Care</div>
 					<div class="panel panel-body">
 						<p>
-							<img src="img/ventas.jpg"  height="190">
+						<div class="cell" align="center">
+            			<img src="img/logo2.png" width="280">
+          				</div>
 						</p>
 						<form id="frmLogin">
 							<label>Usuario</label>
 							<input type="text" class="form-control input-sm" name="usuario" id="usuario">
-							<label>Password</label>
+							<label>Contraseña</label>
 							<input type="password" name="password" id="password" class="form-control input-sm">
 							<p></p>
 							<span class="btn btn-primary btn-sm" id="entrarSistema">Entrar</span>
 							<?php  if(!$validar): ?>
-							<a href="registro.php" class="btn btn-danger btn-sm">Registrar</a>
+							<a href="registro.php" class="btn btn-danger btn-sm">Registrarse</a>
 							<?php endif; ?>
 						</form>
 					</div>
