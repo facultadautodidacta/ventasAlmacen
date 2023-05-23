@@ -14,7 +14,7 @@ if(isset($_SESSION['usuario'])){
 	<body>
 	<body style="background: url(../archivos/wallpaper1.jpg)">
 		<div class="container">
-			<h1>Agregar Datos para Mercado Libre</h1>
+			<h1>Agregar Datos para envio de productos</h1>
 			<div class="row">
 				<div class="col-sm-4">
 					<form id="frmClientes">

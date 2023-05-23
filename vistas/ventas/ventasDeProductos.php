@@ -123,22 +123,22 @@ $conexion=$c->conexion();
 		});
 	}
 
-	function crearVenta(){
-		$.ajax({
-			url:"../procesos/ventas/crearVenta.php",
-			success:function(r){
-				if(r > 0){
-					$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
-					$('#frmVentasProductos')[0].reset();
-					alertify.alert("Venta creada con exito, consulte la informacion de esta en ventas hechas :D");
-				}else if(r==0){
-					alertify.alert("No hay lista de venta!!");
-				}else{
-					alertify.error("No se pudo crear la venta");
-				}
-			}
-		});
-	}
+	// function crearVenta(){
+	// 	$.ajax({
+	// 		url:"../procesos/ventas/crearVenta.php",
+	// 		success:function(r){
+	// 			if(r > 0){
+	// 				$('#tablaVentasTempLoad').load("ventas/tablaVentasTemp.php");
+	// 				$('#frmVentasProductos')[0].reset();
+	// 				alertify.alert("Venta creada con exito, consulte la informacion de esta en ventas hechas :D");
+	// 			}else if(r==0){
+	// 				alertify.alert("No hay lista de venta!!");
+	// 			}else{
+	// 				alertify.error("No se pudo crear la venta");
+	// 			}
+	// 		}
+	// 	});
+	// }
 </script>
 
 <script type="text/javascript">

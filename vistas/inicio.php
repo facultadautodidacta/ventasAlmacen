@@ -19,7 +19,7 @@ if (isset($_SESSION['usuario'])) {
   <body>
   <body style="background: url(../archivos/wallpaper1.jpg)">
     <center>
-      <h1>Bienvenidos a Mercado Libre #1 en ventas en México</h1>
+      <h1>Bienvenidos a ZoneAuto el mejor lugar para tu coche</h1>
     </center>
     <section class="awSlider">
       <div class="carousel slide" data-ride="carousel">
@@ -34,19 +34,19 @@ if (isset($_SESSION['usuario'])) {
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="../archivos/ofertaml1.jpg">
+            <img src="../archivos/slider1.jpg">
             <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <img src="../archivos/ofertaml2.jpg">
+            <img src="../archivos/slider2.jpg">
             <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <img src="../archivos/ofertaml3.jpg">
+            <img src="../archivos/slider3.jpg">
             <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <img src="../archivos/ofertaml4.jpg">
+            <img src="../archivos/slider4.jpg">
             <div class="carousel-caption"></div>
           </div>
         </div>
